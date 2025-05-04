@@ -5,7 +5,7 @@ class CustomSearchIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 20),
+      //margin: EdgeInsets.only(right: 20),
       height: 45,
       width: 45,
       decoration: BoxDecoration(
