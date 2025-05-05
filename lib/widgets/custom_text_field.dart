@@ -5,16 +5,16 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
     required this.hint,
-    required this.maxlines,
+    //required this.maxlines,
   });
   final String hint;
-  final int maxlines;
+  //final int maxlines;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       cursorColor: KPrimaryColor,
-      maxLength: maxlines,
+      //maxLength: maxlines,
       decoration: InputDecoration(
         hintText: hint,
         hintStyle: const TextStyle(color: KPrimaryColor),
