@@ -12,5 +12,5 @@ class AddNoteSuccess extends AddNoteState {}
 class AddNoteFailure extends AddNoteState {
   final String errormassage;
 
-  AddNoteFailure({required this.errormassage});
+  AddNoteFailure(this.errormassage);
 }
