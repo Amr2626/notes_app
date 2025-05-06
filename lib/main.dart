@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notes/views/notes_view.dart';
 
 void main() {
-  runApp(const Notes());
+  runApp(Notes());
 }
 
 class Notes extends StatelessWidget {
@@ -12,8 +12,8 @@ class Notes extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //theme: ThemeData.dark(),
-      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
+      theme: ThemeData.dark(),
+      //theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
       home: const NotesView(),
     );
   }
