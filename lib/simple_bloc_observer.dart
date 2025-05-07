@@ -28,13 +28,13 @@ class SimpleBlocObserver extends BlocObserver {
 
   @override
   void onClose(BlocBase bloc) {
-    //debugPrint('Bloc closed: ${bloc.runtimeType}');
+    debugPrint('Bloc closed: ${bloc.runtimeType}');
     super.onClose(bloc);
   }
 
   @override
   void onCreate(BlocBase bloc) {
-    // debugPrint('Bloc created: ${bloc.runtimeType}');
+    debugPrint('Bloc created: ${bloc.runtimeType}');
     super.onCreate(bloc);
   }
 }
