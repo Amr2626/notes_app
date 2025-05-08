@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:notes/models/note_model.dart';
 import 'package:notes/views/edit_note_view.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
+  const NoteItem({super.key, required this.note});
+  final NoteModel note;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -11,7 +13,7 @@ class NoteItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const EditNoteView();
+              return EditNoteView(); //
             },
           ),
         );
@@ -26,15 +28,15 @@ class NoteItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title: const Text(
-                'Flutter Tips',
-                style: TextStyle(color: Colors.black, fontSize: 26),
+              title: Text(
+                note.title,
+                style: const TextStyle(color: Colors.black, fontSize: 26),
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 25, bottom: 25),
-                child: const Text(
-                  'Build your carrer with amr kamel and flutter',
-                  style: TextStyle(
+                child: Text(
+                  note.subtitle,
+                  style: const TextStyle(
                     color: Color.fromARGB(225, 167, 153, 153),
                     fontSize: 16,
                   ),
@@ -49,9 +51,9 @@ class NoteItem extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 15),
-              child: const Text(
-                'May 2019',
-                style: TextStyle(
+              child: Text(
+                note.date,
+                style: const TextStyle(
                   color: Color.fromARGB(225, 167, 153, 153),
                   fontSize: 16,
                 ),
